@@ -5,7 +5,7 @@ import { FETCH_IMAGES } from './constants'
 
 const fetchData = () => dispatch({ type: FETCH_IMAGES })
 
-export default function HomeComponent(){
+export default function GlobalStateComponent(){
     
     const [value] = useGlobalState("imagesList");
     

@@ -1,5 +1,5 @@
 import { createStore } from 'react-hooks-global-state'
-import { initialState as imagesListState, reducer as imagesListReducer } from '../containers/ImagesList/reducer';
+import { initialState as imagesListState, reducer as imagesListReducer } from '../containers/GlobalState/reducer';
 
 const reducers = [
     imagesListReducer

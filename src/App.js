@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
-import HomeComponent from './containers/ImagesList';
 import { GlobalStateProvider } from './store/store'
+import { BrowserRouter } from 'react-router-dom'
+import ApplicationRoutes from './routes';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <GlobalStateProvider>
-          <HomeComponent></HomeComponent>
+          <BrowserRouter>
+            <ApplicationRoutes></ApplicationRoutes>
+          </BrowserRouter>
         </GlobalStateProvider>
       </div>
     );
