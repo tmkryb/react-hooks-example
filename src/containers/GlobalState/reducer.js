@@ -1,30 +1,14 @@
-import { FETCH_IMAGES, IMAGES_FETCHED } from './constants'
+import { ADD_USER } from './constants'
 
-export const initialState = {
-  images: [],
-  loading: false
-}
+export const initialState = []
 
 export function reducer(state, action) {
   
-  switch (action.type) {
-    case FETCH_IMAGES:      
-      let newState = { 
-        ...state,
-        imagesList:{
-          ...state.imagesList,
-          loading: true,
-        }        
-      }      
-      return newState
-    case IMAGES_FETCHED:
+  switch (action.type) {    
+    case ADD_USER:
       return {
         ...state,
-        imagesList: {
-          ...state.imagesList,
-          loading: false,
-          images: action.payload
-        },
+        users: [...state.users, action.payload]
       }
     default: return state;
   }

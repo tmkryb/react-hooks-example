@@ -1,12 +1,12 @@
 import { createStore } from 'react-hooks-global-state'
-import { initialState as imagesListState, reducer as imagesListReducer } from '../containers/GlobalState/reducer';
+import { initialState as usersListState, reducer as imagesListReducer } from '../containers/GlobalState/reducer';
 
 const reducers = [
     imagesListReducer
 ]
 
 const initialState = {
-    imagesList: imagesListState
+    users: usersListState
 }
 
 function reducer(state = initialState, action) {

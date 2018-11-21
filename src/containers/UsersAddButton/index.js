@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-
+import {useGlobalState} from '../../store/globalState'
 export default function UserAddButton(){
     
-    const [users, setUsers] = useState([])
+    const [users, setUsers] = useGlobalState("users");
     const [newUser, setNewUser] = useState({})
     
     return (
