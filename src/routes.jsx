@@ -4,6 +4,7 @@ import Global from './containers/GlobalState';
 import Local from './containers/LocalState';
 import GlobalNonReducer from './containers/GlobalNonReducer';
 import UseEffect from './containers/UseEffect/index';
+import StandardClassComponent from './containers/StandardClassComponent/index';
 export default function(){
     return (
         <Switch>
@@ -11,6 +12,7 @@ export default function(){
             <Route path="/Local" component={Local}></Route>
             <Route path="/Hairs" component={GlobalNonReducer}></Route>
             <Route path="/Effect" component={UseEffect}></Route>
+            <Route path="/Old" component={StandardClassComponent}></Route>
         </Switch>
     )
 }
