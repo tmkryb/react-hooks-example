@@ -3,7 +3,7 @@ import { useGlobalState } from '../../store/globalState'
 
 export default function UsersList(){
 
-    const [users, setUsers] = useGlobalState('users')
+    const [users] = useGlobalState('users')
 
     return(
         <>
