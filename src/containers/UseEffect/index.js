@@ -5,7 +5,10 @@ export default function UseEffect(){
     const [name, setName] = useState("Burgeriusz")
     const [surname, setSurname] = useState("Hermandy")
     useEffect(() => {        
-        document.title = `${name} ${surname}`;   
+        document.title = `${name} ${surname}`;  
+        return () => {
+            console.log("unmounting")
+        } 
     }, [surname])
     
     return(
